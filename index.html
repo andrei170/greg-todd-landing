@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 168 Income Map | Greg Todd</title>
+<meta name="description" content="You only get 40 clinical hours a week. The free 168 Income Map shows clinicians how to build income from the other 128, without trading more time for money.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The 168 Income Map | Greg Todd">
+<meta property="og:description" content="Build clinician income outside your 40 clinical hours, without burning out. The free map from a PT who escaped the time-for-money trap.">
+<meta property="og:url" content="https://andrei170.github.io/greg-todd-landing/">
+<meta property="og:image" content="https://andrei170.github.io/greg-todd-hub/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 168 Income Map | Greg Todd">
+<meta name="twitter:description" content="Build clinician income outside your 40 clinical hours. The free map from a PT who escaped the time-for-money trap.">
+<meta name="twitter:image" content="https://andrei170.github.io/greg-todd-hub/og-image.png">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;💡&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14253c;
+    --navy-2:#1f3a5f;
+    --ink-navy:#0a1628;
+    --blue:#188bf6;
+    --blue-dark:#0f6fd0;
+    --gold:#c29239;
+    --cream:#f2eddf;
+    --bg:#ffffff;
+    --ink:#16202e;
+    --muted:#5d6b7a;
+    --line:#e4e8ee;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk','Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;line-height:1.14;color:var(--navy);letter-spacing:-0.01em;}
+  h1{font-size:2.7rem;}
+  h2{font-size:2.05rem;}
+  h3{font-size:1.25rem;}
+  p{margin-bottom:1rem;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  section{padding:76px 0;}
+
+  .btn{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:1.05rem;padding:16px 34px;border-radius:8px;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;box-shadow:0 6px 20px rgba(24,139,246,.32);}
+  .btn:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 10px 28px rgba(24,139,246,.42);}
+  .btn-sm{padding:11px 22px;font-size:.95rem;}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .nav-logo{height:34px;width:auto;}
+  .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--navy);}
+
+  .hero{background:linear-gradient(160deg,var(--ink-navy) 0%,var(--navy) 70%,var(--navy-2) 100%);color:#fff;padding:84px 0 78px;}
+  .hero h1{color:#fff;max-width:18ch;}
+  .hero h1 .hl{color:var(--blue);}
+  .hero-sub{font-size:1.18rem;color:#c3d0e0;max-width:46ch;margin:22px 0 28px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .trust-line{margin-top:24px;font-size:.95rem;color:#8ea6c4;font-weight:600;}
+  .hero-photo{border-radius:16px;overflow:hidden;aspect-ratio:1/1;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 60px rgba(0,0,0,.35);background:#0f1f33;}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+
+  .cred{background:var(--cream);padding:30px 0;border-bottom:1px solid var(--line);}
+  .cred-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .badge{background:#fff;border:1px solid #e6dec9;border-radius:30px;padding:10px 20px;font-weight:700;font-size:.9rem;color:var(--navy);}
+
+  .lead{font-size:1.18rem;color:var(--muted);max-width:60ch;}
+  .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px;}
+  .pain{background:var(--cream);border-left:4px solid var(--blue);padding:20px 22px;border-radius:8px;font-weight:600;color:var(--navy);}
+
+  .alt{background:#f6f8fb;}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:transform .2s ease, box-shadow .2s ease;}
+  .card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(20,37,60,.12);}
+  .pill-num{width:46px;height:46px;border-radius:12px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem;margin-bottom:16px;font-family:'Space Grotesk',sans-serif;}
+
+  .vsl-box{max-width:820px;margin:36px auto 0;aspect-ratio:16/9;border-radius:14px;background:linear-gradient(135deg,var(--ink-navy),var(--navy));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#c3d0e0;border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:transform .2s ease;}
+  .vsl-box:hover{transform:scale(1.01);}
+  .play{width:78px;height:78px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 8px 24px rgba(24,139,246,.5);}
+  .play::after{content:"";border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px;}
+  .vsl-label{font-weight:700;font-size:1.05rem;font-family:'Space Grotesk',sans-serif;}
+
+  .stack{max-width:760px;margin:38px auto 0;}
+  .stack-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px;}
+  .check{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;margin-top:2px;}
+  .stack-item h3{font-size:1.08rem;margin-bottom:4px;}
+  .stack-item p{margin:0;color:var(--muted);font-size:.97rem;}
+
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;}
+  .test{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;}
+  .test p.quote{color:var(--ink);font-size:1.02rem;margin-bottom:16px;}
+  .test p.quote .pop{color:var(--gold);font-weight:700;}
+  .test-meta strong{color:var(--navy);font-size:.95rem;}
+  .test-meta span{color:var(--muted);font-size:.85rem;display:block;}
+
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;}
+  .headshot{border-radius:16px;overflow:hidden;aspect-ratio:3/4;border:1px solid #e6dec9;box-shadow:0 16px 40px rgba(20,37,60,.16);background:#dfd7c4;}
+  .headshot img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+
+  .optin{background:linear-gradient(160deg,var(--ink-navy) 0%,var(--navy) 100%);color:#fff;text-align:center;}
+  .optin h2{color:#fff;}
+  .optin p{color:#c3d0e0;max-width:54ch;margin:18px auto 28px;font-size:1.1rem;}
+  .optin-tag{display:inline-block;background:rgba(24,139,246,.16);border:1px solid var(--blue);color:#8ec5ff;font-weight:700;font-size:.83rem;padding:7px 16px;border-radius:30px;margin-bottom:20px;letter-spacing:.05em;text-transform:uppercase;}
+
+  .faq{max-width:780px;margin:34px auto 0;}
+  .q{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#fff;overflow:hidden;}
+  .q-head{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.05rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Space Grotesk',sans-serif;}
+  .q-icon{flex-shrink:0;font-size:1.4rem;color:var(--blue);transition:transform .25s ease;font-weight:700;}
+  .q.open .q-icon{transform:rotate(45deg);}
+  .q-body{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);}
+  .q-body p{padding:0 24px 20px;margin:0;}
+
+  .final{text-align:center;background:#f6f8fb;}
+  .final h2{max-width:20ch;margin:0 auto 16px;}
+
+  footer{background:var(--ink-navy);color:#8ea6c4;padding:40px 0;}
+  .foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;}
+  .foot-nav{display:flex;gap:24px;flex-wrap:wrap;}
+  .foot-nav a{color:#8ea6c4;font-size:.92rem;transition:color .2s ease;}
+  .foot-nav a:hover{color:#fff;}
+  .copy{font-size:.85rem;color:#5d728c;margin-top:8px;width:100%;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.show{opacity:1;transform:none;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.82rem;color:var(--blue);margin-bottom:12px;font-family:'Space Grotesk',sans-serif;}
+  .center{text-align:center;}
+
+  @media(max-width:860px){
+    h1{font-size:2.05rem;}h2{font-size:1.55rem;}
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .hero-photo{max-width:320px;}
+    .pillars{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .pain-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:28px;}
+    .headshot{max-width:300px;}
+    section{padding:56px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="wrap nav-inner">
+    <img class="nav-logo" src="https://assets.cdn.filesafe.space/JDi0OxkeCHo3rQagEeLQ/media/68cd8c3cb967e925515af2da.png" alt="Smart Success Healthcare" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'wordmark\'>GREG TODD</span>');">
+    <a href="#optin" class="btn btn-sm">Get the Free Map</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>You get 40 clinical hours a week. <span class="hl">The income is in the other 128.</span></h1>
+      <p class="hero-sub">The free 168 Income Map shows clinicians how to build income outside the clinic, without burning out or trading more time for money.</p>
+      <a href="#optin" class="btn">Get the Free 168 Income Map</a>
+      <p class="trust-line">From a PT who built three clinics and trained 5,700+ clinicians to escape the trap.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="https://assets.cdn.filesafe.space/JDi0OxkeCHo3rQagEeLQ/media/696abf18b34b647a7d1ddf84.jpg" alt="Greg Todd" loading="eager">
+    </div>
+  </div>
+</header>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred">
+  <div class="wrap cred-grid">
+    <span class="badge">20+ years a licensed PT</span>
+    <span class="badge">Built 3 clinics, 20+ staff</span>
+    <span class="badge">5,700+ clinicians trained</span>
+    <span class="badge">Across 19 specialties</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Let's be honest</p>
+    <h2 class="reveal">Your income is capped at the hours you can physically work.</h2>
+    <p class="lead reveal">You are a great clinician. But your earnings are stuck to a clock: so many patients, so many hours, and then you hit the ceiling. That is the time-for-money trap, and working harder does not fix it. Sound familiar?</p>
+    <div class="pain-grid">
+      <div class="pain reveal">Your income only grows if you see more patients or work more hours. There aren't any left.</div>
+      <div class="pain reveal">You're burned out, and the schedule has no give in it.</div>
+      <div class="pain reveal">You're missing time with your family for a number that won't move.</div>
+      <div class="pain reveal">You know you should build something that isn't per-visit, but you have no idea where to start.</div>
+      <div class="pain reveal">You tried an online thing once. It stalled and you went back to the grind.</div>
+      <div class="pain reveal">"Business" feels like a different language, and you're a clinician, not a marketer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow reveal center">The way out</p>
+    <h2 class="reveal center">The 168 Method</h2>
+    <p class="lead reveal center" style="margin:14px auto 0;">Three steps to build income from the 128 hours you're not in the clinic. The map walks you through step one.</p>
+    <div class="pillars">
+      <div class="card reveal">
+        <div class="pill-num">1</div>
+        <h3>Reclaim the 128</h3>
+        <p>See the income hiding in the hours you already have outside the clinic. The mindset and the math that make leveraged income real for a clinician.</p>
+      </div>
+      <div class="card reveal">
+        <div class="pill-num">2</div>
+        <h3>Build the Solutions-Based Offer</h3>
+        <p>Get paid for a result, not per visit. The shift that lets your income grow without adding hours to your week.</p>
+      </div>
+      <div class="card reveal">
+        <div class="pill-num">3</div>
+        <h3>Install the System</h3>
+        <p>The membership, app, or offer that earns while you're not in the room, so the income compounds instead of resetting every Monday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VSL -->
+<section>
+  <div class="wrap">
+    <h2 class="reveal center">Watch this first</h2>
+    <div class="vsl-box reveal">
+      <div class="play"></div>
+      <div class="vsl-label">Your VSL goes here, recorded as part of the build.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S IN THE MAP -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow reveal center">What you get</p>
+    <h2 class="reveal center">Inside the free 168 Income Map</h2>
+    <p class="lead reveal center" style="margin:14px auto 0;">A one-page plan, not another 90-minute webinar.</p>
+    <div class="stack">
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The 40-vs-128 breakdown</h3><p>See exactly where leveraged income fits in a clinician's week, with the simple math that makes it click.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The three income models for clinicians</h3><p>Memberships, solutions-based offers, and digital care. Which fits your specialty and where to start.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The first-step checklist</h3><p>The exact first move to make this week, so you stop researching and start building.</p></div></div>
+      <div class="stack-item reveal"><div class="check">&#10003;</div><div><h3>The solutions-based offer starter</h3><p>How to package your expertise into a result people pay for, instead of charging per visit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal center">Clinicians who escaped</p>
+    <h2 class="reveal center">Real results from real practitioners</h2>
+    <div class="test-grid">
+      <div class="test reveal">
+        <p class="quote">"Switching to a solutions-based offer, I <span class="pop">more than doubled my monthly earnings.</span>"</p>
+        <div class="test-meta"><strong>Jenna Perkins</strong><span>Nurse Practitioner, Founder &amp; CEO, DiscovHER Health</span></div>
+      </div>
+      <div class="test reveal">
+        <p class="quote">"Do what Greg says, because it works."</p>
+        <div class="test-meta"><strong>Smart Success member</strong><span>Clinician</span></div>
+      </div>
+      <div class="test reveal">
+        <p class="quote"><span class="pop">5,700+ clinicians</span> across 19 specialties have built income beyond the clinic with Greg.</p>
+        <div class="test-meta"><strong>Smart Success Healthcare</strong><span>Trained since 2016</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="headshot reveal">
+      <img src="https://assets.cdn.filesafe.space/JDi0OxkeCHo3rQagEeLQ/media/696abf18f8c5b88e25f669df.png" alt="Greg Todd, empowering healthpreneurs" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow reveal">Who's Greg</p>
+      <h2 class="reveal">I was trading time for money too.</h2>
+      <p class="reveal">I'm a physical therapist. For years my income was capped at the hours I could bill, and my credentials weren't going to get me home earlier with my four kids. I had to learn the business side the hard way.</p>
+      <p class="reveal">I built three clinics with more than 20 staff and grew them into a multi-million-dollar group, then started teaching what I learned. Since then I've trained more than 5,700 clinicians across 19 specialties to escape the time-for-money trap and build income that isn't tied to a clock.</p>
+      <p class="reveal">My mission is simple: free 10,000 healthcare professionals from the trap. The 168 Income Map is where you start.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPT-IN CTA -->
+<section class="optin" id="optin">
+  <div class="wrap">
+    <span class="optin-tag reveal">Free download</span>
+    <h2 class="reveal">Get the 168 Income Map</h2>
+    <p class="reveal">Drop your email and I'll send you the one-page plan to build income from the other 128 hours. No cost, no catch. When you're ready to build it for real, we'll talk.</p>
+    <a href="https://smartsuccesshealthcare.com/" class="btn reveal" target="_blank" rel="noopener">Send Me the Free Map</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal center">Straight answers</p>
+    <h2 class="reveal center">Questions you're probably asking</h2>
+    <div class="faq">
+      <div class="q"><button class="q-head">I'm a clinician, not a businessperson. Is this for me?<span class="q-icon">+</span></button><div class="q-body"><p>That's exactly who this is for. I was a PT with zero business training. The whole point is that you don't need to be a marketer. You need a clinician's path to leveraged income, which is what the map lays out.</p></div></div>
+      <div class="q"><button class="q-head">I don't have time for one more thing.<span class="q-icon">+</span></button><div class="q-body"><p>That's the trap talking. The entire goal is to build income that doesn't cost you more hours. The map is one page, and the first step takes less time than a single extra patient on your schedule.</p></div></div>
+      <div class="q"><button class="q-head">I tried building something online and it flopped.<span class="q-icon">+</span></button><div class="q-body"><p>Most clinicians stall because they start with the wrong model for their specialty. The map helps you pick the right one first, so you're not guessing. And there's a real path and support behind it when you're ready.</p></div></div>
+      <div class="q"><button class="q-head">Does this work for my specialty?<span class="q-icon">+</span></button><div class="q-body"><p>I've trained clinicians across 19 specialties: PT, OT, dietitians, NPs, chiros, counselors, and more. The models adapt to your field. The map shows you which one fits.</p></div></div>
+      <div class="q"><button class="q-head">Is it really free?<span class="q-icon">+</span></button><div class="q-body"><p>Yes. The 168 Income Map is free. It's the first step. If you want to build the whole system with support, that's a conversation we can have later, no pressure.</p></div></div>
+      <div class="q"><button class="q-head">What happens after I download it?<span class="q-icon">+</span></button><div class="q-body"><p>I'll send you the map plus a few short emails that walk you through the first step and show you what's possible. If it clicks and you want help building it, you can book a call. If not, the map is yours to keep.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="reveal">Stop trading time for money. Start building the other 128.</h2>
+    <p class="lead reveal center" style="margin:0 auto 28px;">You already do the hard part every day. Now build the income that isn't tied to the clock.</p>
+    <a href="#optin" class="btn reveal">Get the Free 168 Income Map</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="wordmark" style="color:#fff;">GREG TODD</div>
+    <div class="foot-nav">
+      <a href="#optin">Free Map</a>
+      <a href="#">The Book</a>
+      <a href="#">Podcast</a>
+      <a href="#">Smart Success Healthcare</a>
+    </div>
+    <div class="copy">&copy; 2026 Smart Success Healthcare. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  document.querySelectorAll('.q-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var q = btn.parentElement;
+      var body = q.querySelector('.q-body');
+      var isOpen = q.classList.contains('open');
+      document.querySelectorAll('.q').forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.q-body').style.maxHeight = null;
+      });
+      if(!isOpen){ q.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+</script>
+<script>(function(){function fix(im){if(im.complete&&im.naturalWidth===0){im.style.display='none';}im.addEventListener('error',function(){this.style.display='none';});}document.querySelectorAll('img').forEach(fix);})();</script>
+</body>
+</html>
